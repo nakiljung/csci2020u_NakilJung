@@ -10,3 +10,4 @@ dependencies {
 }
 
 mainClassName = 'csci2020u.lab02.SimpleTest'
+mainClassName = 'csci2020u.lab02.CSVDemo'
