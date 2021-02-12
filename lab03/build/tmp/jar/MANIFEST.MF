@@ -1,0 +1,5 @@
+Manifest-Version: 1.0
+Main-Class: csci2020u.lab02.CSVDemo
+Implementation-Title: Lab Example
+Implementation-Version: 1.0
+
