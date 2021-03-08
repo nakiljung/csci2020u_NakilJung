@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="sample.Controller">
+    <top>
+        <MenuBar id="menuBar" fx:id="menuBar" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" >
+            <menus>
+                <Menu id="fileMenu" fx:id="fileMenu" mnemonicParsing="false" text="File">
+                    <items>
+                        <MenuItem id="newFileItem" fx:id="newFileItem" text="New Ctrl+N" />
+                        <MenuItem id="openFileItem" fx:id="openFileItem" text="Open Ctrl+O" />
+                        <MenuItem id="saveFileItem" fx:id="saveFileItem" text="Save Ctrl+S" />
+                        <MenuItem id="saveFileAsItem" fx:id="saveFileAsItem" text="Save file as... Ctrl+S"/>
+                    </items>
+                </Menu>
+                <Menu id="editionMenu" fx:id="editionMenu" mnemonicParsing="false" text="Edit">
+                </Menu>
+                <Menu id="settingsMenu" fx:id="settingsMenu" mnemonicParsing="false" text="Settings">
+                </Menu>
+                <Menu id="helpMenu" fx:id="helpMenu" mnemonicParsing="false" text="Help">
+                </Menu>
+            </menus>
+        </MenuBar>
+    </top>
+    <center>
+        <TableView fx:id="table" style="-fx-background-color: #696969; -fx-text-fill: white;">
+            <columns>
+                <TableColumn fx:id="filesColumn" prefWidth="350" text="File"
+                             style="-fx-background-color: #696969; -fx-text-fill: white; -fx-border-color: white;">
+                </TableColumn>
+
+
+                <TableColumn fx:id="actualClassColumn" prefWidth="120" text="Actual Class"
+                             style="-fx-background-color: #696969; -fx-text-fill: white; -fx-border-color: white;">
+                </TableColumn>
+
+
+                <TableColumn fx:id="spamProb" prefWidth="150" text="Spam Probability"
+                             style="-fx-background-color: #696969; -fx-text-fill: white;-fx-border-color: white;">
+                </TableColumn>
+            </columns>
+        </TableView>
+    </center>
+
+    <bottom>
+        <AnchorPane>
+            <children>
+                <GridPane alignment="CENTER_LEFT" hgap="10" prefHeight="91.0" prefWidth="622.0" vgap="10"
+                          style="-fx-background-color: #696969; -fx-text-fill: white;">
+                    <padding>
+                        <Insets bottom="10" left="10" right="10" top="10" />
+                    </padding>
+                    <children>
+                        <Label text="Accuracy: " GridPane.columnIndex="0" GridPane.rowIndex="0"
+                               style="-fx-text-fill: white;">
+                            <font>
+                                <Font name="Ubuntu Bold" size="14.0" />
+                            </font>
+                        </Label>
+                        <TextField fx:id="accuracyColumn" editable="false" prefHeight="26.0" prefWidth="110.0"
+                                   GridPane.columnIndex="1" GridPane.rowIndex="0" />
+
+                        <Label text="Precision: " GridPane.columnIndex="2"
+                               style="-fx-text-fill: white;">
+                            <font>
+                                <Font name="Ubuntu Bold" size="14.0" />
+                            </font>
+                        </Label>
+                        <TextField fx:id="precisionColumn" editable="false" prefHeight="26.0" prefWidth="110.0"
+                                   GridPane.columnIndex="3" />
+
+                    </children>
+                    <columnConstraints>
+                        <ColumnConstraints />
+                        <ColumnConstraints />
+                        <ColumnConstraints />
+                        <ColumnConstraints />
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints />
+                        <RowConstraints />
+                    </rowConstraints>
+                </GridPane>
+            </children>
+        </AnchorPane>
+    </bottom>
+</BorderPane>

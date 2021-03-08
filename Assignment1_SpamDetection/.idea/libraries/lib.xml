@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="lib">
+    <CLASSES>
+      <root url="file://$USER_HOME$/Downloads/Compressed/openjfx/lib" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="file://$USER_HOME$/Downloads/Compressed/openjfx/lib" />
+    </SOURCES>
+    <jarDirectory url="file://$USER_HOME$/Downloads/Compressed/openjfx/lib" recursive="false" />
+    <jarDirectory url="file://$USER_HOME$/Downloads/Compressed/openjfx/lib" recursive="false" type="SOURCES" />
+  </library>
+</component>
