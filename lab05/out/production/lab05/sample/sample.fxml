@@ -5,9 +5,27 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.control.TextField?>
 <GridPane fx:controller="sample.Controller"
-          xmlns:fx="http://javafx.com/fxml" alignment="top_left" hgap="10" vgap="10">
-    <TableView fx:id="tableView" GridPane.columnIndex="0" GridPane.rowIndex="0" GridPane.hgrow="ALWAYS" GridPane.vgrow="ALWAYS">
+          xmlns:fx="http://javafx.com/fxml" alignment="top_left" hgap="0" vgap="0">
+
+    <MenuBar>
+        <Menu text="File" >
+            <MenuItem fx:id="newOption" text="New" onAction="#onNewClick"></MenuItem>
+            <MenuItem fx:id="openOptiom" text="Open" onAction="#onOpenClick"></MenuItem>
+            <MenuItem fx:id="saveOptiom" text="Save" onAction="#onSaveClick"></MenuItem>
+            <MenuItem fx:id="saveAsOptiom" text="Save As" onAction="#onSaveAsClick"></MenuItem>
+            <MenuItem fx:id="exitOption" text="Exit" onAction="#onExitClick"></MenuItem>
+        </Menu>
+    </MenuBar>
+
+    <TableView fx:id="tableView" GridPane.columnIndex="0" GridPane.rowIndex="1" >
+
         <columns>
             <TableColumn fx:id="studentID" text="SID" prefWidth="135"></TableColumn>
             <TableColumn fx:id="assignment" text="Assignments" prefWidth="135"></TableColumn>
@@ -18,4 +36,34 @@
         </columns>
     </TableView>
 
+    <GridPane alignment="bottom_left" hgap="10" vgap="10" GridPane.columnIndex="0" GridPane.rowIndex="10">
+        <padding>
+            <Insets bottom="10" left="10" right="10" top="10" />
+        </padding>
+        <children>
+            <Label text="SID:" GridPane.rowIndex="0" GridPane.columnIndex="2">
+            </Label>
+            <TextField GridPane.rowIndex="0" GridPane.columnIndex="5"></TextField>
+
+            <Label text="Assignments:" GridPane.rowIndex="0" GridPane.columnIndex="7">
+            </Label>
+            <TextField GridPane.rowIndex="0" GridPane.columnIndex="10"></TextField>
+
+
+            <Label text="Midterm:" GridPane.rowIndex="1" GridPane.columnIndex="2" >
+            </Label>
+            <TextField GridPane.rowIndex="1"  GridPane.columnIndex="5"></TextField>
+
+            <Label text="Final Exam:" GridPane.rowIndex="1" GridPane.columnIndex="7">
+            </Label>
+            <TextField GridPane.rowIndex="1" GridPane.columnIndex="10"></TextField>
+
+            <Button text="Add" GridPane.rowIndex="2"  GridPane.columnIndex="5"></Button>
+        </children>
+
+    </GridPane>
+
+
+
 </GridPane>
+
